@@ -8,16 +8,6 @@ AddEventHandler('fallouthacking:client:StartMinigame', function(wordLength, retr
     SetNuiFocus(true, true)
 end)
 
-RegisterCommand("fallout", function()
-    TriggerEvent('fallouthacking:client:StartMinigame', 5, 4, function(winner)
-        if winner then
-            print("Winner!!")
-        else
-            print("Loser!!")
-        end
-    end)
-end)
-
 RegisterNUICallback("Close", function()
     minigameCallback(false)
     SetNuiFocus(false, false)
