@@ -527,7 +527,6 @@ Success = function()
 }
 
 WinCondition = function() {
-	TogglePower();
 	$.post(`https://${GetParentResourceName()}/Win`);
 }
 
