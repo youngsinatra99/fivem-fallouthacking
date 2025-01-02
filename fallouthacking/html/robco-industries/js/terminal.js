@@ -527,6 +527,15 @@ Success = function()
 }
 
 WinCondition = function() {
+  Power = "off";
+	$("#terminal-background-off").css("visibility", "visible");
+	$("#terminal").css("background-image", "url('robco-industries/img/bg-off.png')");
+	$("#terminal").html("");
+	if (Sound) {
+		$("#poweroff")[0].play();
+		$("#minigame").hide();
+  }
+  
 	$.post(`https://${GetParentResourceName()}/Win`);
 }
 
