@@ -47,9 +47,6 @@ RegisterNUICallback("Win", function()
     end
 
     SetNuiFocus(false, false)
-    SendNUIMessage({
-        action = "close"
-    })
 end)
 
 exports("start", startMinigame)
